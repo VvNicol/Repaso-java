@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dto.AlumnoDto;
+import servicios.FicheroInterfaz;
 import servicios.MenuImplementacion;
 import servicios.MenuInterfaz;
 import servicios.OperativaImplementacion;
@@ -25,8 +26,10 @@ public class Inicio {
 		boolean esCerrado = false;
 
 		OperativaInterfaz oi = new OperativaImplementacion();
-
+		FicheroInterfaz fi = new FicheroImplementacion();
 		do {
+			
+			fi.CargarFicheros();
 
 			try {
 				opcionSeleccionar = mi.MenuPrincipal();
